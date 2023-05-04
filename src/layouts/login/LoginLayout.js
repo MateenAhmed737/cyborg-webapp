@@ -22,8 +22,8 @@ export default function LoginLayout({ children, illustration, title }) {
         sx={{
           zIndex: 9,
           position: 'absolute',
-          mt: { xs: 1.5, md: 5 },
-          ml: { xs: 2, md: 5 },
+          mt: { sm: 1.5, md: 5 },
+          ml: { sm: 2, md: 5 },
         }}
       />
 
@@ -44,7 +44,7 @@ export default function LoginLayout({ children, illustration, title }) {
       </StyledSection>
 
       <StyledContent>
-        <Stack sx={{ width: 1 }}> {children} </Stack>
+        <Stack sx={{ width: 1 }}>{children}</Stack>
       </StyledContent>
     </StyledRoot>
   );

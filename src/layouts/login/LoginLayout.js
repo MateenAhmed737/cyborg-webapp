@@ -22,6 +22,7 @@ export default function LoginLayout({ children, illustration, title }) {
         sx={{
           zIndex: 9,
           position: 'absolute',
+          transform: 'scale(2)',
           mt: { sm: 1.5, md: 5 },
           ml: { sm: 2, md: 5 },
         }}

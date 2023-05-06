@@ -4,20 +4,11 @@ import AuthGuard from '../auth/AuthGuard';
 import GuestGuard from '../auth/GuestGuard';
 // layouts
 import CompactLayout from '../layouts/compact';
-import DashboardLayout from '../layouts/dashboard';
+import DashboardLayout from '../layouts/dashboard/DashboardLayout';
 // config
 import { PATH_AFTER_LOGIN } from '../config-global';
 //
-import {
-  Page404,
-  PageOne,
-  PageTwo,
-  PageSix,
-  PageFour,
-  PageFive,
-  LoginPage,
-  PageThree,
-} from './elements';
+import { Page404, LoginPage, FeaturePage, DashboardPage } from './elements';
 
 // ----------------------------------------------------------------------
 
@@ -44,21 +35,16 @@ export default function Router() {
           <DashboardLayout />
         </AuthGuard>
       ),
-      children: [
-        { element: <Navigate to={PATH_AFTER_LOGIN} replace />, index: true },
-        { path: 'one', element: <PageOne /> },
-        { path: 'two', element: <PageTwo /> },
-        { path: 'three', element: <PageThree /> },
-        {
-          path: 'user',
-          children: [
-            { element: <Navigate to="/dashboard/user/four" replace />, index: true },
-            { path: 'four', element: <PageFour /> },
-            { path: 'five', element: <PageFive /> },
-            { path: 'six', element: <PageSix /> },
-          ],
-        },
-      ],
+      children: [{ element: <DashboardPage />, index: true }],
+    },
+    {
+      path: '/feature',
+      element: (
+        <AuthGuard>
+          <DashboardLayout />
+        </AuthGuard>
+      ),
+      children: [{ element: <FeaturePage />, index: true }],
     },
     {
       element: <CompactLayout />,

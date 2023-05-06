@@ -6,18 +6,18 @@ import { useSettingsContext } from '../components/settings';
 
 // ----------------------------------------------------------------------
 
-export default function PageOne() {
+export default function DashboardPage() {
   const { themeStretch } = useSettingsContext();
 
   return (
     <>
       <Helmet>
-        <title> Page One | Minimal UI</title>
+        <title> Dashboard | CI</title>
       </Helmet>
 
       <Container maxWidth={themeStretch ? false : 'xl'}>
         <Typography variant="h3" component="h1" paragraph>
-          Page One
+          Dashboard
         </Typography>
 
         <Typography gutterBottom>

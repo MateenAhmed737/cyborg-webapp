@@ -93,6 +93,56 @@ export const _mapContact = [
 
 // ----------------------------------------------------------------------
 
+export const _mapFeatures = [
+  {
+    title: 'Credit Bureau',
+    path: '/dashboard/feature',
+    colorTheme: 'success',
+  },
+  {
+    title: 'Bank Statement (Deposit)',
+    path: '/dashboard/feature',
+    colorTheme: 'warning',
+  },
+  {
+    title: 'Digital Footprint',
+    path: '/dashboard/feature',
+    colorTheme: 'error',
+  },
+  {
+    title: 'Payment Data (Lending)',
+    path: '/dashboard/feature',
+    colorTheme: 'info',
+  },
+  {
+    title: 'Bank Statement (Lending)',
+    path: '/dashboard/feature',
+    colorTheme: 'error',
+  },
+  {
+    title: 'Credit Card',
+    path: '/dashboard/feature',
+    colorTheme: 'success',
+  },
+  {
+    title: 'Customer information',
+    path: '/dashboard/feature',
+    colorTheme: 'success',
+  },
+  {
+    title: 'Target Computation',
+    path: '/dashboard/feature',
+    colorTheme: 'error',
+  },
+  {
+    title: 'Lorem ipsum',
+    path: '/dashboard/feature',
+    colorTheme: 'warning',
+  },
+];
+
+// ----------------------------------------------------------------------
+
 export const _socials = [
   {
     value: 'facebook',
